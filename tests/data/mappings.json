@@ -1,0 +1,75 @@
+[
+    {
+        "class": "Dataset",
+        "path": null,
+        "substitutions": {
+            "name": "Name",
+            "description": "Description",
+            "documentation": "Documentation",
+            "updateFrequency": "UpdateFrequency",
+            "license": "License"
+        }
+    },
+    {
+        "class": "Publisher",
+        "path": null,
+        "substitutions": {
+            "name": "ManagedBy",
+            "contact": "Contact"
+        }
+    },
+    {
+        "class": "Tag",
+        "path": "Tags",
+        "substitutions": {
+            "name": "@"
+        }
+    },
+    {
+        "class": "Resource",
+        "path": "Resources",
+        "substitutions": {
+            "arn": "@.ARN",
+            "region": "@.Region",
+            "description": "@.Description",
+            "type": "@.Type"
+        }
+    },
+    {
+        "class": "Tutorial",
+        "path": "DataAtWork.Tutorials",
+        "substitutions": {
+            "title": "@.Title",
+            "url": "@.URL",
+            "authorName": "@.AuthorName",
+            "authorUrl": "@.AuthorURL"
+        }
+    },
+    {
+        "class": "Publication",
+        "path": "DataAtWork.Publications",
+        "substitutions": {
+            "title": "@.Title",
+            "url": "@.URL",
+            "authorName": "@.AuthorName",
+            "authorUrl": "@.AuthorURL"
+        }
+    },
+    {
+        "class": "ToolOrApplication",
+        "path": "DataAtWork.\"Tools & Applications\"",
+        "substitutions": {
+            "title": "@.Title",
+            "url": "@.URL",
+            "authorName": "@.AuthorName",
+            "authorUrl": "@.AuthorURL"
+        }
+    },
+    {
+        "class": "Service",
+        "path": "DataAtWork.Tutorials[].Services[]",
+        "substitutions": {
+            "name": "@"
+        }
+    }
+]

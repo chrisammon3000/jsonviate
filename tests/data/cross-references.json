@@ -1,0 +1,1577 @@
+[
+    [
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "managedBy",
+            "to_uuid": "07ca86c5-7293-408d-8b24-e6795d8cfec5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTag",
+            "to_uuid": "b507b71c-2808-4020-a002-257969d25f83",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTag",
+            "to_uuid": "6688bd8f-7d44-4662-8563-fe76b20c09ac",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTag",
+            "to_uuid": "9b30324f-c11e-4a98-bbcf-1b708a088a36",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTag",
+            "to_uuid": "68bc6984-8794-42c1-8c2c-bb8ef76fad9d",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasResource",
+            "to_uuid": "c773433f-2ca9-4327-b040-b268001a8bea",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "59b010df-f3b9-49e9-b5f8-1f330c84bcef",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "228a468d-b8f3-4fe9-b387-8c8a54d52261",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "48f76458-a300-4314-b6a9-9c7468b637d4",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "29db9402-958d-4b43-920c-750add9fd920",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "228a468d-b8f3-4fe9-b387-8c8a54d52261",
+            "from_property_name": "usesService",
+            "to_uuid": "a02beda2-46e4-4446-a189-c9d5135ab187",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        },
+        {
+            "from_uuid": "29db9402-958d-4b43-920c-750add9fd920",
+            "from_property_name": "usesService",
+            "to_uuid": "94d4573b-1df7-46db-a162-e3b39dfe31ed",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        }
+    ],
+    [
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "managedBy",
+            "to_uuid": "7efdcd89-d673-4cb2-b2f6-8165e080a82a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "02d14f4a-8fc9-459e-9805-da2fe34a205f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "0dea4e22-d454-483c-a534-9ce762b28951",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "d078c087-c203-4488-aa23-be1b53aa5e5b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "b8f8f7d3-9748-429c-8dda-f919bdf622ca",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "0cd4d548-1a12-4de3-8621-7b5dfaf78c1b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "5b892ef3-f6e5-4462-8eab-9c555ba96cb4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "0724e09f-3f7b-4751-b1f4-9bfcfe196258",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "92d3d85b-e5fc-4299-87d1-cf603ece6b13",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "5b410c89-c976-4407-84d7-febc97c8d63e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "b5815d26-f06e-4709-8593-e925e3e36a54",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "c39f44bb-84fc-4523-b0c1-45fb53d904a4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasTag",
+            "to_uuid": "fd988d0e-3618-4929-bc15-32b3ca5d4a07",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "21fb0814-73be-43bd-9f66-625650ff7ef4",
+            "from_property_name": "hasResource",
+            "to_uuid": "8d697cd4-99fe-4d6d-b291-cace85cbf368",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "managedBy",
+            "to_uuid": "5ef87617-5cff-498f-b9f7-371a32684d8b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "7ba2d269-1497-4d8c-983b-b95832214ebd",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "c4c59751-6d80-49e8-8a5d-8333b836cb28",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "d3c55521-accf-452b-a501-3fb4389985b9",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "4046cfcc-6df8-4893-969c-d5967133cce8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "1e0d4b7a-9177-4af2-9301-0ca3b22d4c1a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTag",
+            "to_uuid": "0d0ff63d-1feb-4a21-896c-9cc52aaff488",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasResource",
+            "to_uuid": "df4cd687-e32d-4a9e-b364-6c62205b3e14",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "46bf1a1c-c55d-45ab-bcb4-f35aec75ff70",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "10847d86-83b7-446f-b4c2-8e9e70b796aa",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "managedBy",
+            "to_uuid": "41c938a2-453c-4d9f-a052-b44a849d053c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "75bf9709-5e8e-4d54-8d52-2701946f6316",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "03fdbde1-e65d-49ce-8456-e31e0ce5c17c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "0aedebc0-6f6f-444c-9cf0-7d455c9fb642",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "e75631a7-7bf1-4902-bc6a-e7a0130c0c5e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "753332b3-1f86-4ce3-8a32-d3cb113e979c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasTag",
+            "to_uuid": "f84f80cb-1338-4baa-a046-c6e0c2a61524",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasResource",
+            "to_uuid": "95d142a2-f1af-4f62-8c3b-77863e580786",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "7b1e8f88-4830-4b5f-b114-4b50adad45a3",
+            "from_property_name": "hasResource",
+            "to_uuid": "2eac5300-eeeb-4513-a989-b6a6c5e33586",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "managedBy",
+            "to_uuid": "7313cc7c-4dcf-46c6-a7c4-54aafd588ca0",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "9a2770b4-5105-4b09-af1d-e69fc331569c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "4bfc11d3-1482-4e9e-aebb-7d0866c7a13e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "82a0f838-5d9a-48dc-a606-93947aa7d0ff",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "60034fd5-209f-40e8-8198-0bef7efafadb",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "61d4ad2c-18c8-40c0-9fe5-c8ef7efc7a0a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "21d40af3-05c0-4596-82ca-38a40e58babe",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "52869952-26e7-46e0-982f-df74d749e3e3",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTag",
+            "to_uuid": "1c79e1a2-aff9-48bc-8351-3413772af4ed",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasResource",
+            "to_uuid": "ab282021-8980-4879-a15c-80126baf571a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasResource",
+            "to_uuid": "b1afb3fe-5ee2-4c8d-937b-2aa942c244ac",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "69bfd0ff-052a-4792-8271-3e8fd258ea3e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "9cf8beb7-f3ab-4f5e-9c21-f3eedba96e95",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "7e282798-f840-467e-b34c-14a92895a4b7",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "7bab9322-acd3-4c17-bff7-aaf317109343",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "69bfd0ff-052a-4792-8271-3e8fd258ea3e",
+            "from_property_name": "usesService",
+            "to_uuid": "3c4e66d5-ae07-4abc-b096-b36b80b05e69",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        },
+        {
+            "from_uuid": "9cf8beb7-f3ab-4f5e-9c21-f3eedba96e95",
+            "from_property_name": "usesService",
+            "to_uuid": "85b1de67-3862-4604-ab3b-52b6dc586213",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        }
+    ],
+    [
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "managedBy",
+            "to_uuid": "141b16ab-8053-4eea-bff6-bc2d950075f1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasTag",
+            "to_uuid": "f077801d-934a-4405-9a11-ca53c1420a77",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasTag",
+            "to_uuid": "7c1a044a-61e2-4b58-be29-af0eed10d419",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasTag",
+            "to_uuid": "484c0a1c-0d49-4075-80cb-62726d86bf67",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasTag",
+            "to_uuid": "80ea3faf-a9a7-4103-a1ad-259053f761e4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasTag",
+            "to_uuid": "5cafbb7e-650b-44c1-8f8f-76b3a7df89e4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "39eb6310-60af-4c7d-aede-72279529a6d5",
+            "from_property_name": "hasResource",
+            "to_uuid": "dec13946-e93d-4894-9159-624173d40103",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "cef0364e-8117-4f8b-bc99-f08f3508558f",
+            "from_property_name": "managedBy",
+            "to_uuid": "a1887309-794a-4138-adb4-b69fa444b9b8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "cef0364e-8117-4f8b-bc99-f08f3508558f",
+            "from_property_name": "hasTag",
+            "to_uuid": "4a4dac86-b6be-4cf8-a32e-6fcdd19dc228",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "cef0364e-8117-4f8b-bc99-f08f3508558f",
+            "from_property_name": "hasTag",
+            "to_uuid": "8a545b72-8c28-4445-b7fa-5fe247ad3267",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "cef0364e-8117-4f8b-bc99-f08f3508558f",
+            "from_property_name": "hasResource",
+            "to_uuid": "8ca61231-cd92-4477-a38b-5dbe9d7777f1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "managedBy",
+            "to_uuid": "b3f08928-5131-4d5a-b3e8-73267998174b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasTag",
+            "to_uuid": "12203caf-9b56-4e87-a6c2-2df560715831",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasTag",
+            "to_uuid": "4bf4f0f4-4d75-490f-bfb3-d7e09c26ce09",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasTag",
+            "to_uuid": "ba4a05ba-f0ed-4beb-9532-f78d5caf3e42",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasTag",
+            "to_uuid": "96251691-cf2c-4d18-8c7f-a4bd8cf3f201",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasTag",
+            "to_uuid": "e86253d6-5bc9-453b-a247-78146b3075d9",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasResource",
+            "to_uuid": "818f90b2-34d2-4295-8f51-0a0290cd2efa",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "006c1e35-e41d-4a0d-a0ba-044e546434ac",
+            "from_property_name": "hasResource",
+            "to_uuid": "88121a2a-38e9-4767-ae2c-1954120ae258",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "managedBy",
+            "to_uuid": "72c989ea-bca5-4a7a-a987-63b6ce1f47f8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "a6b4b145-0f40-40e3-8444-f56afdca77a9",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "c65c64b3-de3d-4d2c-8020-683cc24b92ad",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "c7ab715c-3f5a-4a15-a76f-096eec91eb17",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "0fbe24be-ae79-43cf-ae01-26c3d1601ed0",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "354c81e0-918a-4253-972e-012fe740acc6",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "7fef4bb3-4700-47c7-86af-167ea27562b1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "0ffacf26-40b2-44fc-892f-b31447395aa1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTag",
+            "to_uuid": "208c2398-e508-4508-9a9e-3a8844704fcb",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasResource",
+            "to_uuid": "aa5c5821-5b0e-4948-b563-953de33f8fa7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasResource",
+            "to_uuid": "3e4b6bf1-9998-4c9f-bbe2-01a880d97606",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "2e6a088c-ad6b-459e-bae2-9e52407cf880",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "42f9de4d-2628-4de6-9f0c-e6b3e778080d",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "9f789e56-c831-4214-836b-7a5ef8fa17b4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "d96f0287-82cb-411a-b1a3-49b45c46dc1f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "c85ebbdd-c2b2-4cc8-8554-3523e629990e",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "e2b165c6-212f-4f22-8cb2-c46cf58814ba",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "managedBy",
+            "to_uuid": "96710327-08f0-4f4d-adf7-88a685eaeba0",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "0e6c49e8-922e-4d51-ae01-f6a9bd92fd6e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "6380ab00-4427-4db1-9830-9566ab100f65",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "6d399133-3bda-4959-a541-95264915a3c8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "534204b5-3780-4bb7-afbf-c2edad45cbc6",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "dc5344fe-b59c-4168-aaa5-81378af34872",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "3779036b-965e-4eec-9f80-8bf24650ab91",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTag",
+            "to_uuid": "fb5a8c2e-87df-41de-9668-564dccc76890",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasResource",
+            "to_uuid": "bfd681be-bd03-4714-8af2-d965e4656358",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "b1e89683-7178-4fcd-9227-72655d1ece5a",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "b3bc198d-053b-46c8-b397-7975b4df56a2",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "managedBy",
+            "to_uuid": "92f2a017-8eac-4315-92d3-102fb46dfd44",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "cb6da4b3-cd49-4e21-bf4c-7ce3f0b8b0ac",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "4665e734-626b-4ae1-9ae3-0fde697cb4f5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "0f96b792-275f-442e-9dbf-fed8b53f7fea",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "2242963f-2bb1-40c8-8bbf-f0bd3e04f0f4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "599c457d-1d0c-4a82-aa75-110044f37651",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "ba99f3c7-4005-46eb-aa33-1affec6a494f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "1a424490-74b6-4365-a473-e8bfead78b88",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasTag",
+            "to_uuid": "a5a89718-f7bf-4419-a2a7-c29d9224635b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "8ed21210-6042-4863-8ef9-61956cd6d3cb",
+            "from_property_name": "hasResource",
+            "to_uuid": "22a7948a-a180-4b0f-b6e5-2a9b1c742d4b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "787d494d-55ae-4a03-8775-fb717a365e98",
+            "from_property_name": "managedBy",
+            "to_uuid": "e1c3d3c7-fac1-4800-b04c-ae7bb24b2fd4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "787d494d-55ae-4a03-8775-fb717a365e98",
+            "from_property_name": "hasTag",
+            "to_uuid": "a3a30d4a-fcb1-4f87-89b0-ddb6b99efbd0",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "787d494d-55ae-4a03-8775-fb717a365e98",
+            "from_property_name": "hasResource",
+            "to_uuid": "7a0df5f2-d2bd-460a-802c-06039aa29fe3",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "managedBy",
+            "to_uuid": "ba5c6d67-c046-464a-868b-184651b8ff6e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasTag",
+            "to_uuid": "983c3649-dc38-48d9-8477-33b407733c3f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasTag",
+            "to_uuid": "a0dead0b-1dd3-45c4-ae24-bfbd38be62c2",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasTag",
+            "to_uuid": "9b1c2dd4-ce0e-4c66-accf-0f08779a32e1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasTag",
+            "to_uuid": "88e4d111-7787-4365-a26f-f832d1854a5d",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasResource",
+            "to_uuid": "02e96885-378c-4165-8115-f1dfcbdba757",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "d0f4d905-cac7-49ad-9341-b0f0eb096c6a",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "19f305ee-9871-4643-a4e8-de6d5cee380c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "managedBy",
+            "to_uuid": "2967a516-2908-4e84-ae6a-9ad00626b7dc",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "hasTag",
+            "to_uuid": "b6b886bb-7a05-42f8-8565-09ac3e7a33b7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "hasTag",
+            "to_uuid": "98349dd5-14b2-459f-965f-e5547b693da1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "hasTag",
+            "to_uuid": "6c6685fd-b432-401e-b5b5-b7e1c4f63ca7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "hasTag",
+            "to_uuid": "6c2d182f-6841-4610-ac0c-2e795f486946",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "66980630-6c98-4bd1-af40-05c0486d2fe9",
+            "from_property_name": "hasResource",
+            "to_uuid": "8078fe1e-d3c6-4788-ae7a-9305eb43c5a5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "managedBy",
+            "to_uuid": "e27bc915-621a-4f9f-8874-cb8158beda06",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTag",
+            "to_uuid": "0c220f2c-e57b-4f4e-b9ea-bb3ba97828a6",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTag",
+            "to_uuid": "bb6e3f79-70bb-4370-a93c-1c5f4d2a46a7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTag",
+            "to_uuid": "7a662230-7b5b-4666-ab3b-ffddf7385def",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTag",
+            "to_uuid": "93e1f6a8-6fd4-41a6-abdd-84221868ac46",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasResource",
+            "to_uuid": "df00e814-ab4c-488a-8cfd-cea3e68ece31",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "21873138-8fa6-4c51-911b-70ccff76a272",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "aef080aa-ad7f-4e32-ab34-6d5eae9cb7af",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "74287df2-761a-40a5-84d1-68414f8d4474",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "cf9e387a-6f34-4845-a4f8-7c7f38bff958",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "4313a55c-c167-4f90-b2b1-6a075e48797f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "4bd5f589-cd9d-42a6-8f3a-a02bb958f7c6",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "2b64e71a-27e8-4ed1-a314-de252bf111aa",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "managedBy",
+            "to_uuid": "8ada1d8f-9444-4b0a-aae1-2d7d327f242d",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "f9b97643-88d2-4109-b026-390b1fb99764",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "f683dd17-7210-4e6d-9e09-72638d6e5d0c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "b7e811d7-ba35-468f-9d08-ca06945e45b3",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "93d29af0-f81c-4d09-87db-95450fcb3721",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "9916c536-8a9d-467e-9d78-c55930e98fd4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "1313d2cb-85b2-481b-a9d1-8c864b98a869",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "e98e2de6-6c05-4dab-88da-53cbe3f0ca19",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "d6afa646-048c-4bde-ba65-21ffa481a522",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "fa9a3bc4-6c16-45ad-9a98-e2c5067683a7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "7d2e83c1-ae25-4679-8e15-a92aedf114ea",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTag",
+            "to_uuid": "9ce96659-d9bf-4c6d-a931-31be9b5df009",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasResource",
+            "to_uuid": "9e1a3ad6-c3e2-4340-a226-96a0b4b25f7e",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasResource",
+            "to_uuid": "4927afc8-4012-4d7e-b27d-bebc25248907",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasResource",
+            "to_uuid": "091205a9-be1a-47e6-9867-493de7a4c48f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasResource",
+            "to_uuid": "e8d09b08-9ed2-49e4-b3ca-85ab4e2161bd",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "781ce224-da47-495a-9f43-fe15180f34bc",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "da22b31a-0e88-4bcd-9296-181d65857e4c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "76394ccc-6e91-4dd7-b7a2-a4d1c3503d2c",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "bc17abb6-3cd2-4784-b456-154f3b9662ab",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        }
+    ],
+    [
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "managedBy",
+            "to_uuid": "650c7c7c-ab17-4abb-84cb-5643d3ac2c89",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "2410ba73-125b-414a-a749-6808e97008d2",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "b83c973d-359e-450e-a17e-0b75a8de8056",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "4b7c4f28-1cfc-491a-84ab-0592cfe7e26b",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "2c79d62d-f04f-4d0c-9ef3-52e02a07c719",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "3a2ed964-a187-426b-bbcd-d69b1bd6e8d1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasTag",
+            "to_uuid": "17be1918-08f4-4cb7-9072-aaf863f6e7ea",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "62d79366-77d2-438f-af8d-0146083e16ce",
+            "from_property_name": "hasResource",
+            "to_uuid": "69edc1ad-980b-453f-bc0a-3919815d21d1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "managedBy",
+            "to_uuid": "c31dc94b-4e62-4ec5-bd0b-5b7307d44d16",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "8fd1c569-a525-46e5-b641-85bae558b8fa",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "06a0fdb1-696f-4309-b52a-5ddf22b8a5b4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "d8778e7b-6e39-42c3-9bd9-286dbbd816c7",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "ca2f65b8-71d9-47a5-b363-1483e2a0f0b5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "bd4e3ab2-f266-4571-bb88-2bd9cba3822a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "e21949f5-4600-4902-8918-8f6d46887518",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "0105cdde-83f9-42f5-b10c-e5a1e26faab5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasTag",
+            "to_uuid": "2ae2dc52-7aa6-4c04-a9ba-396e61d1b343",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "16ba0e27-9dc6-4de4-a164-5ee6398a5eb1",
+            "from_property_name": "hasResource",
+            "to_uuid": "02c8aa5c-de85-40c3-9315-c6f5b2dd39a5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ],
+    [
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "managedBy",
+            "to_uuid": "acca10fa-32fa-456b-816f-b81d4e88a801",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "b599f04a-6cf0-4906-9df6-095719dc09cf",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "52d5bc69-cd6e-4a79-9987-3bcad5254443",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "2a279b0e-b436-4b1c-8da0-e55bbba9d3ea",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "84a7a3d8-1f8f-4a59-a995-091a3384c6f0",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "67096fbe-30b6-420b-8441-141ddb54f673",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTag",
+            "to_uuid": "78b5379a-f5cb-43d1-a1b2-6723609c4825",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasResource",
+            "to_uuid": "798ad79f-c2b7-44e7-87c3-8dc14b32e961",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasResource",
+            "to_uuid": "71d7fd58-9803-4b02-908d-1729392079ab",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "b67624b5-a44c-42fd-a5ed-ab3c55863d69",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "60550970-41ed-4844-bb2d-0eb7fa6e192c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "60550970-41ed-4844-bb2d-0eb7fa6e192c",
+            "from_property_name": "usesService",
+            "to_uuid": "6b0b4572-51b9-4307-8fa6-e6ca8d941957",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        }
+    ],
+    [
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "managedBy",
+            "to_uuid": "d71b3b68-d10a-4745-8529-cf9bc04399b5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "fa739a59-1424-483c-baf2-8f80e4cd76cb",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "399a2abe-9b8c-4e66-a067-1dd190da35b4",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "b1ab1626-2548-4a06-862b-2d42a14728ac",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "225db958-d29a-4394-98a7-f7e70518de0a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "664e6e19-22e9-4a12-8f59-7d9fc1d9771d",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "81fb080f-ccbd-4b06-a409-c4c51b1587d2",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTag",
+            "to_uuid": "578df997-7d40-40d1-a701-94c67fb3a12a",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "ccd7b8ef-26c4-4d3d-98f4-347d01fe3ed8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "4777540d-a89a-42b0-9250-5c631f9cb4dd",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "e32121f0-39db-404c-8dc9-6b5480f2069c",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "85e86662-2d09-4553-872e-cd59df3223e8",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "21848a29-f0d7-46f7-b220-73a80ddc0b78",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasResource",
+            "to_uuid": "b1c08a66-d152-4a50-9e38-7b42c4770e36",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "bcf11cbd-0d9b-40f0-ad48-32a73dfeeaf6",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "04371062-ede3-421d-a4cb-6d2006fd1d3f",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "5493bf42-cd5e-4b0b-87d9-267212d9fb13",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "864af169-1891-4d9e-bed3-51133e3a3460",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "e93a8726-0799-4ead-a3fe-6b923dfe576f",
+            "from_property_name": "hasTutorial",
+            "to_uuid": "6c170d9c-fcef-46d2-9612-f0664e1752c5",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tutorial"
+        },
+        {
+            "from_uuid": "5493bf42-cd5e-4b0b-87d9-267212d9fb13",
+            "from_property_name": "usesService",
+            "to_uuid": "6581c729-0908-436e-a5b3-627cc4953345",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        },
+        {
+            "from_uuid": "6c170d9c-fcef-46d2-9612-f0664e1752c5",
+            "from_property_name": "usesService",
+            "to_uuid": "41140381-c647-4169-a8c3-c0aa95b1a7be",
+            "from_class_name": "Tutorial",
+            "to_class_name": "Service"
+        }
+    ],
+    [
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "managedBy",
+            "to_uuid": "55365984-3bc7-4067-8941-5ff0fc1069da",
+            "from_class_name": "Dataset",
+            "to_class_name": "Publisher"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "79b1641d-3120-4794-a17d-383859aef511",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "725c54e1-810e-470f-8771-72036df69ade",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "09f16ae9-2998-409e-858f-45d9ea9a1c24",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "67dfb519-152c-4f75-983f-1e1cde4cafb1",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "423a721d-b271-4bf3-b8bf-9fa41428b7d2",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasTag",
+            "to_uuid": "2fed9321-bac9-4a41-8591-5ef70a2d1a38",
+            "from_class_name": "Dataset",
+            "to_class_name": "Tag"
+        },
+        {
+            "from_uuid": "fc1e2fb9-effb-45d4-bfb8-63a052021e02",
+            "from_property_name": "hasResource",
+            "to_uuid": "17860e12-85ec-4f19-b450-746e614a1001",
+            "from_class_name": "Dataset",
+            "to_class_name": "Resource"
+        }
+    ]
+]
