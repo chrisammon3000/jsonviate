@@ -1,5 +1,5 @@
 # jsonviate
-Map JSON records and define cross-references for Weavitae classes.
+Map JSON records and define cross-references for Weaviate classes.
 
 ## Table of Contents
 
