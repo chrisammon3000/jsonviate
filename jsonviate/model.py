@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class UnmarshalledJson:
+class JsonModel:
 
     __slots__ = "__dict__"
 
@@ -23,7 +23,7 @@ class UnmarshalledJson:
         return json.dumps(self.__dict__)
 
     def __repr__(self) -> str:
-        pass
+        return f"{self.__class__.__name__}({self.__dict__})"
 
 
 # Automatically assembles models from json mappings but needs to use jmespath
@@ -31,12 +31,12 @@ class JsonToWeaviate:
     def __init__(
         self, mappings: dict, references: dict = None, data: dict = None
     ) -> None:
-        self._input = UnmarshalledJson(**data) if data else None
+        self._input = JsonModel(**data) if data else None
         self._class_mappings = mappings
         self._ref_mappings = references
 
         if self._input is not None:
-            self._build()
+            self.build()
 
     @classmethod
     def from_json(cls, obj, data: str, mappings: str = None, references: str = None):
@@ -46,8 +46,8 @@ class JsonToWeaviate:
             data=data,
         )
 
-    def _build(self):
-        self.classes = UnmarshalledJson()
+    def build(self):
+        self.classes = JsonModel()
         self._build_objects()
 
         if self._ref_mappings is not None:
@@ -71,7 +71,7 @@ class JsonToWeaviate:
                     par_align = self.get_parent_alignment(map["path"])
 
             # build class
-            setattr(self.classes, map["class"], UnmarshalledJson())
+            setattr(self.classes, map["class"], JsonModel())
             setattr(getattr(self.classes, map["class"]), "name", map["class"])
             setattr(getattr(self.classes, map["class"]), "references", None)
 
@@ -118,7 +118,7 @@ class JsonToWeaviate:
             setattr(
                 getattr(self.classes, ref_spec["fromClass"]),
                 "references",
-                UnmarshalledJson(),
+                JsonModel(),
             )
         for ref_spec in self._ref_mappings:
             # Skip if class is not in JSON
@@ -202,10 +202,13 @@ class JsonToWeaviate:
             )
         )
 
-    # TODO static method for relationships
-    # TODO static method for data objects
-    # TODO validate the ids set correctly for references
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}()"
+
     # TODO Test with different types of JSON
+    # TODO Documentation of class & ref mappings
+    # TODO skip renaming and use default field names in class mapping
+    # TODO validate the ids set correctly for references
 
 
 if __name__ == "__main__":
@@ -218,9 +221,13 @@ if __name__ == "__main__":
 
     # data = json.loads(event["Records"][0]["body"])["data"]
 
-    with open("___data/output/aws-odr.json") as f:
+    with open("___data/awslabs/output/aws-odr.json") as f:
         data_objs = json.load(f)
     data = data_objs[2]
+
+    # # write to file
+    # with open("tests/data/raw/aws-odr.json", "w") as f:
+    #     json.dump(data_objs[:20], f, indent=4)
 
     mappings = [
         {
@@ -326,21 +333,20 @@ if __name__ == "__main__":
     with open(f"{path}/mappings.json", "w") as f:
         json.dump(mappings, f, indent=4)
     with open(f"{path}/references.json", "w") as f:
-        json.dump(references, f, indent=4)    
+        json.dump(references, f, indent=4)
 
-
-    # builders = []
-    # data_objects = []
-    # cross_references = []
-    # factory = JsonToWeaviate(mappings, references)
-    # for idx, data in enumerate(data_objs):
-    #     builder = JsonToWeaviate.from_json(factory, data)
-    #     builders.append(builder)
-    #     data_objects.append(builder.data_objects)
-    #     cross_references.append(builder.cross_references)
-
-    #     if idx == 20:
-    #         break
+    builders = []
+    data_objects = []
+    cross_references = []
+    factory = JsonToWeaviate(mappings, references)
+    for idx, data in enumerate(data_objs):
+        builder = JsonToWeaviate.from_json(factory, data)
+        builders.append(builder)
+        data_objects.append(builder.data_objects)
+        cross_references.append(builder.cross_references)
+        print(builder)
+        if idx == 20:
+            break
 
     # with open(f"___data/output/all_data/data-objects.json", "w") as f:
     #     json.dump(data_objects, f, indent=4)
