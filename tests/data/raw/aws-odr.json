@@ -1,0 +1,1351 @@
+[
+    {
+        "Name": "Open City Model (OCM)",
+        "Description": "Open City Model is an initiative to provide cityGML data for all the buildings in the United States.\nBy using other open datasets in conjunction with our own code and algorithms it is our goal to provide 3D geometries for every US building.\n",
+        "Documentation": "https://github.com/opencitymodel/opencitymodel",
+        "Contact": "https://github.com/opencitymodel/opencitymodel#contact",
+        "UpdateFrequency": "Quarterly",
+        "ManagedBy": "BuildZero",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "infrastructure"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "events",
+            "cities",
+            "geospatial"
+        ],
+        "License": "https://github.com/opencitymodel/opencitymodel#license",
+        "Resources": [
+            {
+                "Description": "Project data files",
+                "ARN": "arn:aws:s3:::opencitymodel",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Using Open City Model with the 3dCityDB",
+                    "URL": "https://github.com/opencitymodel/opencitymodel/blob/master/examples/3dCityDB-to-GoogleEarth.md",
+                    "AuthorName": "Allen Gilliland",
+                    "AuthorURL": "https://github.com/agilliland"
+                },
+                {
+                    "Title": "Running queries on Open City Model using AWS Athena",
+                    "URL": "https://github.com/opencitymodel/opencitymodel/blob/master/examples/Query-OpenCityModel-using-AWS-Athena.md",
+                    "AuthorName": "Allen Gilliland",
+                    "AuthorURL": "https://github.com/agilliland",
+                    "Services": [
+                        "Athena"
+                    ]
+                },
+                {
+                    "Title": "Investigating environmental characteristics of US cities using publicly available ASDI datasets",
+                    "URL": "https://github.com/aws-samples/aws-asdi-cities-smsl-notebook",
+                    "NotebookURL": "https://github.com/aws-samples/aws-asdi-cities-smsl-notebook/blob/main/ASDI_Cities_Demo.ipynb",
+                    "AuthorName": "Darren Ko",
+                    "Services": [
+                        "SageMaker Studio Lab"
+                    ]
+                }
+            ],
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Name": "NOAA Continuously Operating Reference Stations (CORS) Network (NCN)",
+        "Description": "The [NOAA Continuously Operating Reference Stations (CORS) Network (NCN)](https://geodesy.noaa.gov/CORS/), managed by NOAA/National Geodetic Survey ([NGS](https://geodesy.noaa.gov/)), provide Global Navigation Satellite System (GNSS) data, supporting three dimensional positioning, meteorology, space weather, and geophysical applications throughout the United States. The NCN is a multi-purpose, multi-agency cooperative endeavor, combining the efforts of hundreds of government, academic, and private organizations. The stations are independently owned and operated. Each agency shares their GNSS/GPS carrier phase and code range measurements and station metadata with NGS, which are analyzed and distributed free of charge.\nNGS provides access to all NCN data collected since 9 February (040) 1994.\n- #### Access to NCN Data and Products\n    - [NOAA-NCN on AWS](https://noaa-cors-pds.s3.amazonaws.com/index.html)\n    - [NGS server: https://geodesy.noaa.gov/corsdata/](https://geodesy.noaa.gov/corsdata/)\n    - [NGS's customized data request service (UFCORS)](https://geodesy.noaa.gov/UFCORS/)\n    - [NGS Anonymous ftp://geodesy.noaa.gov/cors/ - This service is going away on August 02, 2021!](ftp://geodesy.noaa.gov/cors/)\n- #### NCN Data and Products\n    - **RINEX**: The GPS/GNSS data collected at NCN stations are made available to the public by NGS in Receiver INdependent EXchange (RINEX) format. Most data are available within 1 hour (60 minutes) from when they were recorded at the remote site, and a few sites have a delay of 24 hours (1440 minutes).<br/>RINEX data can be found at: *rinex/`YYYY`/`DDD`/`ssss`/*\n    - **Station logs**: \n        - Station log files contain all the historical equipment (receiver/antenna) used at that station, approximate location, owner and operating agency, etc..<br/>Station log files can be found at: *station_log/`ssss`.log.txt*\n        - Historical and current equipment information of all NCN stations, except those that are considered IGS stations.<br/>These data can be found at: *station_log/cumulative.station.info.cors*\n    - **Published Coordinates and Velocities**: NAD83 and ITRF coordinates and velocities of each NCN station. All published coordinates and velocities are given for the Antenna Reference Point (ARP).<br/>Published coordinate and velocity files can be found at: *coord/coord_`YY`/*<br/>In July 2019, NGS published [MYCS2](https://geodesy.noaa.gov/CORS/news/mycs2/mycs2.shtml)!\n    - **Time-series Plots**:\n        - *Short-term* plots show the repeatability of a site for the last 90-days with respect to the current published position, corrected for the effect of the published velocity. These plots are updated daily.<br/>Short-term plots can be found at: */Plots/`ssss`_`YY`.short.png*\n        - *Long-term* plots show the show weekly residual positions with respect to the current published coordinates from our stacked solution. Newer sites may not have a long-term plot if they were added after our Multi-year Solution Processing campaign.<br/>Long-term plots can be found at: */Plots/Longterm/`ssss`_`YY`.long.png*\n    - **Daily Broadcast Ephemeris**:\n        - Daily GPS Broadcast ephemeris can be found at: *rinex/`YYYY`/`DDD`/brdc`DDD`0.`YY`n.gz*\n        - Daily GLONASS-only Broadcast ephemeris can be found at: *rinex/`YYYY`/`DDD`/brdc`DDD`0.`YY`g.gz*\n    - **Daily final, rapid, and hourly ultra-rapid GNSS Orbit** can be found at: \n        - Daily final and rapid GNSS Orbit can be found at: *rinex/`YYYY`/`DDD`/`AAAWWWWD`.sp3.gz*\n        - Hourly ultra-rapid GNSS Orbit can be found at: *rinex/`YYYY`/`DDD`/`AAAWWWWD`_`HH`.sp3.gz*\n    - In which:\n      - `YYYY`: 4-digit year\n      - `YY`: The last 2-digit of year\n      - `DDD`: 3-digit day of year [001,002,..366]\n      - `D`: day of week [Sun=0, Mon=1,..,Fri=6]\n      - `ssss`: 4-char station ID\n      - `h`: 1-char hour of day (a=00, b=01, c=02,..,x=23)\n      - `HH`: 2-digit hour of day (00,01,02,..,23)\n      - `WWWW`: 4-digit GPS week number\n      - `AAA`: 3-char analysis center name/type of solution, such as:\n          - igs: IGS final solution combination\n          - igl: IGS final solution combination (GLONASS-only)\n          - igr: IGS rapid solution combination\n          - igu: IGS ultra-rapid solution combination\n    \n",
+        "Documentation": "For more information, visit [NCN Data and Products](https://geodesy.noaa.gov/CORS/data.shtml)",
+        "Contact": "- For general inquiries about NCN data and products, email \u2709 ngs.cors at noaa.gov\n- For any questions regarding data delivery or any general questions regarding the NOAA Open Data Dissemination (NODD) Program, email the NODD Team at nodd@noaa.gov.\n- We also seek to identify case studies on how NOAA data is being used and will be featuring those stories in joint publications and in upcoming events. If you are interested in seeing your story highlighted, please share it with the NODD team by emailing nodd@noaa.gov\n",
+        "ManagedBy": "[NOAA](http://www.noaa.gov/)",
+        "UpdateFrequency": "Most data are available within 1 hour from when they were recorded at the remote site, and a few sites have a delay of 24 hours.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "elevation"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "broadcast ephemeris",
+            "Continuously Operating Reference Station (CORS)",
+            "earth observation",
+            "geospatial",
+            "GPS",
+            "GNSS",
+            "mapping",
+            "NOAA CORS Network (NCN)",
+            "post-processing",
+            "RINEX",
+            "survey"
+        ],
+        "License": "There are no restrictions on the use of this data.",
+        "Resources": [
+            {
+                "Description": "[NCN Data and Products](https://geodesy.noaa.gov/CORS/data.shtml)",
+                "ARN": "arn:aws:s3:::noaa-cors-pds",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse NOAA-NCN Bucket](https://noaa-cors-pds.s3.amazonaws.com/index.html)"
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "1940 Census Population Schedules, Enumeration District Maps, and Enumeration District Descriptions",
+        "Description": "The 1940 Census population schedules were created by the Bureau of the Census in an attempt to enumerate every person living in the United States on April 1, 1940, although some persons were missed. The 1940 census population schedules were digitized by the National Archives and Records Administration (NARA) and released publicly on April 2, 2012.\nThe 1940 Census enumeration district maps contain maps of counties, cities, and other minor civil divisions that show enumeration districts, census tracts, and related boundaries and numbers used for each census. The coverage is nation wide and includes territorial areas.\nThe 1940 Census enumeration district descriptions contain written descriptions of census districts, subdivisions, and enumeration districts.\n",
+        "Documentation": "https://www.archives.gov/developer/1940-census",
+        "Contact": "public.dataset.program@nara.gov",
+        "ManagedBy": "National Archives and Records Administration (NARA)",
+        "UpdateFrequency": "Not updated",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "socioeconomic"
+                ]
+            }
+        },
+        "Tags": [
+            "nara",
+            "census",
+            "archives",
+            "1940 census",
+            "demography",
+            "aws-pds"
+        ],
+        "License": "US Government work",
+        "Resources": [
+            {
+                "Description": "1940 Census",
+                "ARN": "arn:aws:s3:::nara-1940-census",
+                "Region": "us-east-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "1940 Census on the AWS Registry of Open Data",
+                    "URL": "https://www.archives.gov/developer/1940-census",
+                    "AuthorName": "National Archives and Records Administration"
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "National Archives 1940 Census",
+                    "URL": "https://1940census.archives.gov",
+                    "AuthorName": "National Archives and Records Administration",
+                    "AuthorURL": "https://www.archives.gov"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "NOAA Global Hydro Estimator (GHE)",
+        "Description": "Global Hydro-Estimator provides a global\nmosaic imagery of rainfall estimates from\nmulti-geostationary satellites, which\ncurrently includes GOES-16, GOES-15,\nMeteosat-8, Meteosat-11 and Himawari-8.\nThe GHE products include: Instantaneous\nrain rate, 1 hour, 3 hour, 6 hour, 24 hour\nand also multi-day rainfall accumulation.\n",
+        "Contact": "For questions regarding product content or\nquality, visit https://www.ospo.noaa.gov/Products/atmosphere/ghe/index.html.\n<br />\nFor any questions regarding data delivery or any general questions regarding the NOAA Open Data Dissemination (NODD) Program, email the NODD Team at nodd@noaa.gov.\n<br /> We also seek to identify case studies on how NOAA data is being used and will be featuring those stories in joint publications and in upcoming events. If you are interested in seeing your story highlighted, please share it with the NODD team by emailing nodd@noaa.gov\n",
+        "ManagedBy": "[NOAA](http://www.noaa.gov/)",
+        "Documentation": "https://www.ospo.noaa.gov/Products/atmosphere/ghe/index.html",
+        "UpdateFrequency": "15 minute-instantaneous",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "water"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "meteorological",
+            "sustainability",
+            "water",
+            "weather"
+        ],
+        "License": "There are no restrictions on the use of this data.",
+        "Resources": [
+            {
+                "Description": "Project data files",
+                "ARN": "arn:aws:s3:::noaa-ghe-pds",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://noaa-ghe-pds.s3.amazonaws.com/index.html)"
+                ]
+            },
+            {
+                "Description": "New data notifications for GHE, only Lambda and SQS protocols allowed",
+                "ARN": "arn:aws:sns:us-east-1:123901341784:NewGHEObject",
+                "Region": "us-east-1",
+                "Type": "SNS Topic"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": null,
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Name": "USGS 3DEP LiDAR Point Clouds",
+        "Description": "The goal of the [USGS 3D Elevation Program ](https://www.usgs.gov/core-science-systems/ngp/3dep) (3DEP) is to collect elevation data in the form of light detection and ranging (LiDAR) data over the conterminous United States, Hawaii, and the U.S. territories, with data acquired over an 8-year period. This dataset provides two realizations of the 3DEP point cloud data. The first resource is a public access organization provided in [Entwine Point Tiles](https://entwine.io/entwine-point-tile.html) format, which a lossless, full-density, streamable octree based on [LASzip](https://laszip.org) (LAZ) encoding. The second resource is a [Requester Pays](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) of the original, Raw LAZ (Compressed LAS) 1.4 3DEP format, and more complete in coverage, as sources with incomplete or missing CRS, will not have an ETP tile generated.  Resource names in both buckets correspond to the USGS project names.",
+        "Documentation": "https://github.com/hobu/usgs-lidar/",
+        "Contact": "https://github.com/hobu/usgs-lidar",
+        "ManagedBy": "[Hobu, Inc.](https://hobu.co)",
+        "UpdateFrequency": "Periodically",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "elevation"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "elevation",
+            "disaster response",
+            "geospatial",
+            "lidar",
+            "sustainability",
+            "stac"
+        ],
+        "License": "US Government Public Domain https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map",
+        "Resources": [
+            {
+                "Description": "Public access Entwine Point Tiles of most resources from the ``arn:aws:s3:::usgs-lidar`` bucket.",
+                "ARN": "arn:aws:s3:::usgs-lidar-public",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[STAC Catalog](https://usgs-lidar-stac.s3-us-west-2.amazonaws.com/ept/catalog.json)"
+                ]
+            },
+            {
+                "Description": "A [Requester Pays](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) Bucket of Raw LAZ 1.4 3DEP data. Data in this bucket is more complete in coverage than the EPT bucket, but it is not a complete 3DEP mirror. Some resources in this bucket also have incomplete and missing coordinate system information, which is why they might not be mirrored into the EPT bucket.",
+                "ARN": "arn:aws:s3:::usgs-lidar",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket",
+                "RequesterPays": true
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Using Lambda Layers with USGS 3DEP LiDAR Point Clouds",
+                    "URL": "https://github.com/hobu/usgs-lidar/tree/master/lambda",
+                    "AuthorName": "Howard Butler",
+                    "AuthorURL": "https://twitter.com/howardbutler",
+                    "Services": [
+                        "Lambda"
+                    ]
+                },
+                {
+                    "Title": "Extracting buildings and roads from AWS Open Data using Amazon SageMaker",
+                    "URL": "https://aws.amazon.com/blogs/machine-learning/extracting-buildings-and-roads-from-aws-open-data-using-amazon-sagemaker/",
+                    "AuthorName": "Yunzhi Shi, Tianyu Zhang, and Xin Chen",
+                    "Services": [
+                        "SageMaker"
+                    ]
+                },
+                {
+                    "Title": "WebGL Visualization of USGS 3DEP Lidar Point Clouds with Potree and Plasio.js",
+                    "URL": "https://usgs.entwine.io/",
+                    "AuthorName": "Connor Manning",
+                    "AuthorURL": "https://twitter.com/csmannin"
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "OpenTopography access to 3DEP lidar point cloud data",
+                    "URL": "https://portal.opentopography.org/datasets",
+                    "AuthorName": "OpenTopography",
+                    "AuthorURL": "https://opentopography.org/"
+                },
+                {
+                    "Title": "Facebook Line of Sight Check",
+                    "URL": "https://www.facebook.com/isptoolbox/line-of-sight-check/",
+                    "AuthorName": "Facebook",
+                    "AuthorURL": "https://www.facebook.com/isptoolbox/"
+                },
+                {
+                    "Title": "Equator - View, Process, and Download USGS 3DEP LiDAR data in-browser",
+                    "URL": "https://equatorstudios.com/lidar-viewer/",
+                    "AuthorName": "Equator Studios",
+                    "AuthorURL": "https://equatorstudios.com"
+                }
+            ],
+            "Publications": [
+                {
+                    "Title": "USGS 3DEP Lidar Point Cloud Now Available as Amazon Public Dataset",
+                    "URL": "https://www.usgs.gov/news/usgs-3dep-lidar-point-cloud-now-available-amazon-public-dataset",
+                    "AuthorName": "Department of the Interior, U.S. Geological Survey",
+                    "AuthorURL": "https://www.usgs.gov"
+                },
+                {
+                    "Title": "Statewide USGS 3DEP Lidar Topographic Differencing Applied to Indiana, USA",
+                    "URL": "https://www.mdpi.com/2072-4292/14/4/847/htm",
+                    "AuthorName": "Chelsea Phipps Scott, Matthew Beckley, Minh Phan, Emily Zawacki, Christopher Crosby, Viswanath Nandigam, and Ramon Arrowsmith"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "CIViC (Clinical Interpretation of Variants in Cancer)",
+        "Description": "Precision medicine refers to the use of prevention and treatment strategies that are tailored to the unique features of each individual and their disease. In the context of cancer this might involve the identification of specific mutations shown to predict response to a targeted therapy. The biomedical literature describing these associations is large and growing rapidly. Currently these interpretations exist largely in private or encumbered databases resulting in extensive repetition of effort. Realizing precision medicine will require this information to be centralized, debated and interpreted for application in the clinic. CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum for dissemination of knowledge and active discussion of the clinical significance of cancer genome alterations.",
+        "Documentation": "https://docs.civicdb.org/",
+        "Contact": "help@civicdb.org",
+        "ManagedBy": "The McDonnell Genome Institute at Washington University School of Medicine",
+        "UpdateFrequency": "First of each month",
+        "Tags": [
+            "aws-pds",
+            "genetic",
+            "genomic",
+            "life sciences",
+            "vcf"
+        ],
+        "License": "[CC0](https://creativecommons.org/publicdomain/zero/1.0/)",
+        "Resources": [
+            {
+                "Description": "Monthly CIViC data dumps including gene, variant, assertion, and evidence tables.",
+                "ARN": "arn:aws:s3:::civic-aws-opendata",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Publications": [
+                {
+                    "Title": "CIViC is a community knowledgebase for expert crowdsourcing the clinical interpretation of variants in cancer",
+                    "URL": "https://www.nature.com/articles/ng.3774",
+                    "AuthorName": "Malachi Griffith",
+                    "AuthorURL": "https://griffithlab.org/"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "The Multilingual Amazon Reviews Corpus",
+        "Description": "We present a collection of Amazon reviews specifically designed to aid research in multilingual text classification. The dataset contains reviews in English, Japanese, German, French, Chinese and Spanish, collected between November 1, 2015 and November 1, 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID and the coarse-grained product category (e.g. 'books', 'appliances', etc.)",
+        "Documentation": "https://github.com/awslabs/open-data-docs/tree/main/docs/amazon-reviews-ml",
+        "Contact": "multilingual-reviews-dataset@amazon.com",
+        "ManagedBy": "Amazon",
+        "UpdateFrequency": "None specified.",
+        "Tags": [
+            "natural language processing",
+            "machine learning"
+        ],
+        "License": "https://github.com/awslabs/open-data-docs/blob/main/docs/amazon-reviews-ml/license.txt",
+        "Resources": [
+            {
+                "Description": "A collection of Amazon reviews in English, Japanese, German, French, Spanish and Chinese.",
+                "ARN": "arn:aws:s3:::amazon-reviews-ml",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": null,
+            "Tools & Applications": null,
+            "Publications": [
+                {
+                    "Title": "The Multilingual Amazon Reviews Corpus",
+                    "URL": "https://arxiv.org/abs/2010.02573",
+                    "AuthorName": "Phillip Keung, Yichao Lu, Gy\u00f6rgy Szarvas, Noah A. Smith"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "Software Heritage Graph Dataset",
+        "Description": "[Software Heritage](https://www.softwareheritage.org/) is the largest\nexisting public archive of software source code and accompanying\ndevelopment history. The Software Heritage Graph Dataset is a fully\ndeduplicated Merkle DAG representation of the Software Heritage archive.\n\nThe dataset links together file content identifiers, source code\ndirectories, Version Control System (VCS) commits tracking evolution over\ntime, up to the full states of VCS repositories as observed by Software\nHeritage during periodic crawls. The dataset\u2019s contents come from major\ndevelopment forges (including GitHub and GitLab), FOSS distributions (e.g.,\nDebian), and language-specific package managers (e.g., PyPI). Crawling\ninformation is also included, providing timestamps about when and where all\narchived source code artifacts have been observed in the wild.\n",
+        "Documentation": "https://docs.softwareheritage.org/devel/swh-dataset/graph/athena.html",
+        "Contact": "aws@softwareheritage.org",
+        "ManagedBy": "Software Heritage",
+        "UpdateFrequency": "Data is updated yearly",
+        "Tags": [
+            "aws-pds",
+            "source code",
+            "open source software",
+            "free software",
+            "digital preservation"
+        ],
+        "License": "Creative Commons Attribution 4.0 International.\n\nBy accessing the dataset, you agree with the Software Heritage [Ethical\nCharter for using the archive\ndata](https://www.softwareheritage.org/legal/users-ethical-charter/) and\nthe [terms of use for bulk\naccess](https://www.softwareheritage.org/legal/bulk-access-terms-of-use/).\n",
+        "Resources": [
+            {
+                "Description": "Software Heritage Graph Dataset",
+                "ARN": "arn:aws:s3:::softwareheritage",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            },
+            {
+                "Description": "[S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents) files",
+                "ARN": "arn:aws:s3:::softwareheritage-inventory",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": null,
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Deprecated": true,
+        "DeprecatedNotice": "This dataset listing is deprecated in favor of [USGS-Landsat](https://registry.opendata.aws/usgs-landsat/). Please refer to [USGS cloud access mechanism](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-commercial-cloud-data-access) for more details.",
+        "Name": "Landsat 8",
+        "Description": "An ongoing collection of satellite imagery of all land on Earth produced by\nthe Landsat 8 satellite.\n",
+        "Documentation": "https://github.com/awslabs/open-data-docs/tree/main/docs/landsat-pds",
+        "Contact": "https://lists.osgeo.org/mailman/listinfo/landsat-pds",
+        "ManagedBy": "[Planet](https://www.planet.com/)",
+        "UpdateFrequency": "New Landsat 8 scenes are added regularly as soon as they are available.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "satellite imagery"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "earth observation",
+            "satellite imagery",
+            "geospatial",
+            "natural resource",
+            "sustainability",
+            "disaster response"
+        ],
+        "License": "There are no restrictions on the use of data received from the U.S. Geological Survey's Earth Resources Observation and Science (EROS) Center or NASA's Land Processes Distributed Active Archive Center (LP DAAC), unless expressly identified prior to or at the time of receipt. More information on licensing and Landsat data citation is available from USGS.\n",
+        "Resources": [
+            {
+                "Description": "Scenes and metadata",
+                "ARN": "arn:aws:s3:::landsat-pds",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://landsat-pds.s3.amazonaws.com/index.html)",
+                    "[Earth Search STAC Catalog](https://earth-search.aws.element84.com/v0/collections/landsat-8-l1-c1)"
+                ]
+            },
+            {
+                "Description": "New scene notifications",
+                "ARN": "arn:aws:sns:us-west-2:274514004127:NewSceneHTML",
+                "Region": "us-west-2",
+                "Type": "SNS Topic"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "A Gentle Introduction to GDAL Part 4: Working with Satellite Data",
+                    "URL": "https://medium.com/planet-stories/a-gentle-introduction-to-gdal-part-4-working-with-satellite-data-d3835b5e2971",
+                    "AuthorName": "Planet",
+                    "AuthorURL": "https://www.planet.com/"
+                },
+                {
+                    "Title": "Exploring the Chile wildfires with Landsat and Sentinel-2 imagery",
+                    "URL": "https://www.gearthblog.com/blog/archives/2017/02/exploring-chile-wildfires-landsat-sentinel-2-imagery.html",
+                    "AuthorName": "Timothy Whitehead"
+                },
+                {
+                    "Title": "Using Vector tiles and AWS Lambda, we can build a really simple API to get Landsat and Sentinel images",
+                    "URL": "https://remotepixel.ca/blog/searchapi_20171211.html",
+                    "AuthorName": "Remote Pixel",
+                    "AuthorURL": "https://remotepixel.ca/"
+                },
+                {
+                    "Title": "Integrate imagery from the full Landsat archive into your own apps, maps, and analysis with Landsat image services",
+                    "URL": "http://www.arcgis.com/home/group.html?id=a74dff13f1be4b2ba7264c3315c57077#overview",
+                    "AuthorName": "Esri",
+                    "AuthorURL": "https://www.esri.com/en-us/home"
+                },
+                {
+                    "Title": "Using Cloud-Optimized GeoTIFF",
+                    "URL": "http://www.acgeospatial.co.uk/cog-part-2-python/",
+                    "AuthorName": "acgeospatial",
+                    "AuthorURL": "http://www.acgeospatial.co.uk/"
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "landsatlive.live",
+                    "URL": "https://landsatlive.live",
+                    "AuthorName": "Development Seed",
+                    "AuthorURL": "https://developmentseed.org/"
+                },
+                {
+                    "Title": "EOS Land Viewer",
+                    "URL": "https://eos.com/landviewer/",
+                    "AuthorName": "Earth Observing System",
+                    "AuthorURL": "https://eos.com/"
+                },
+                {
+                    "Title": "Aggi: the fire detecting Twitter bot",
+                    "URL": "https://twitter.com/aggibot",
+                    "AuthorName": "Aggi",
+                    "AuthorURL": "https://twitter.com/aggibot"
+                },
+                {
+                    "Title": "COG-Explorer - View Cloud Optimized GeoTIFF images in the browser directly from object storage",
+                    "URL": "https://geotiffjs.github.io/cog-explorer/",
+                    "AuthorName": "EOX",
+                    "AuthorURL": "https://eox.at/"
+                },
+                {
+                    "Title": "Spectator - tracking Landsat 8, accessing the data and quick preview",
+                    "URL": "https://spectator.earth/",
+                    "AuthorName": "Spectator",
+                    "AuthorURL": "https://spectator.earth/"
+                },
+                {
+                    "Title": "Apps for exploring and analyzing Landsat imagery on the fly",
+                    "URL": "http://www.esri.com/landing-pages/software/landsat/unlock-earths-secrets",
+                    "AuthorName": "Esri",
+                    "AuthorURL": "https://www.esri.com/en-us/home"
+                },
+                {
+                    "Title": "Development Seed Geolambda",
+                    "URL": "https://developmentseed.org/blog/2017/08/17/geolambdas/",
+                    "AuthorName": "Matthew Hanson",
+                    "AuthorURL": "https://developmentseed.org/team/matt-hanson/"
+                },
+                {
+                    "Title": "FME Landsat-8 on AWS Reader",
+                    "URL": "https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/landsat8aws/landsat8aws.htm",
+                    "AuthorName": "Safe Software",
+                    "AuthorURL": "https://www.safe.com/"
+                },
+                {
+                    "Title": "FME Landsat-8/Sentinel-2 File Selector",
+                    "URL": "http://demos.fmeserver.com/landsat-sentinel-selector/",
+                    "AuthorName": "Safe Software",
+                    "AuthorURL": "https://www.safe.com/"
+                },
+                {
+                    "Title": "Sentinel Hub WMS/WMTS/WCS Service for Landsat",
+                    "URL": "http://www.sentinel-hub.com/apps/wms",
+                    "AuthorName": "Sinergise",
+                    "AuthorURL": "http://www.sinergise.com/"
+                },
+                {
+                    "Title": "Sentinel Playground for Landsat",
+                    "URL": "https://apps.sentinel-hub.com/sentinel-playground/?source=L8",
+                    "AuthorName": "Sinergise",
+                    "AuthorURL": "http://www.sinergise.com/"
+                },
+                {
+                    "Title": "Dynamic map tiling with Cloud-Optimized GeoTIFFs",
+                    "URL": "https://kylebarron.dev/blog/cog-mosaic/overview",
+                    "AuthorName": "Kyle Barron"
+                }
+            ],
+            "Publications": [
+                {
+                    "Title": "Using Remote Sensing Images and Cloud Services on AWS to Improve Land Use and Cover Monitoring",
+                    "URL": "https://ieeexplore.ieee.org/abstract/document/9165649",
+                    "AuthorName": "K. R. Ferreira, et al."
+                }
+            ]
+        }
+    },
+    {
+        "Name": "IDEAM - Colombian Radar Network",
+        "Description": "Historical and one-day delay data from the IDEAM radar network.",
+        "Documentation": "http://www.pronosticosyalertas.gov.co/archivos-radar",
+        "Contact": "atencionalciudadano@ideam.gov.co, radares_ideam@ideam.gov.co",
+        "ManagedBy": "[IDEAM](http://www.ideam.gov.co/)",
+        "UpdateFrequency": "Updated level II data is added as soon as it is available.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "weather"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "earth observation",
+            "natural resource",
+            "weather",
+            "meteorological",
+            "sustainability"
+        ],
+        "License": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "Resources": [
+            {
+                "Description": "Level II data",
+                "ARN": "arn:aws:s3:::s3-radaresideam",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Guia de como explorar y plotear los archivos de radar utilizando el lenguaje de programaci\u00f3n Python",
+                    "URL": "http://www.pronosticosyalertas.gov.co/documents/78690/112207077/AWS_RADARESCOL.pdf/aafc181d-0b6a-47e0-97e9-9b6290ac84d6",
+                    "AuthorName": "IDEAM"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "TIGER Training",
+        "Description": "\"This dataset contains the training data for the [Tumor InfiltratinG lymphocytes in breast cancER or TIGER](https://tiger.grand-challenge.org) challenge. TIGER is the first challenge on fully automated assessment of tumor-infiltrating lymphocytes (TILs) in breast cancer histopathology slides. TILs are proving to be an important biomarker in cancer patients as they can play a part in killing tumor cells, particularly in some types of breast cancer. Identifying and measuring TILs can help to better target treatments, particularly immunotherapy, and may result in lower levels of other more aggressive treatments, including chemotherapy.\"\n",
+        "Documentation": "https://tiger.grand-challenge.org/data/",
+        "Contact": "https://tiger.grand-challenge.org/contact/",
+        "ManagedBy": "Radboud University Medical Center",
+        "UpdateFrequency": "As required",
+        "Tags": [
+            "aws-pds",
+            "life sciences",
+            "cancer",
+            "computational pathology",
+            "grand-challenge.org",
+            "histopathology",
+            "deep learning",
+            "computer vision"
+        ],
+        "License": "CC BY-NC 4.0",
+        "Resources": [
+            {
+                "Description": "Whole slide images with corresponding annotations including tumor, stroma and tumor infiltrating lymphocytes",
+                "ARN": "arn:aws:s3:::tiger-training",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tools & Applications": [
+                {
+                    "Title": "TIGER Challenge",
+                    "URL": "https://tiger.grand-challenge.org/",
+                    "AuthorName": "Diagnostic Image Analysis Group, Radboudumc, Nijmegen",
+                    "AuthorURL": "https://www.diagnijmegen.nl/"
+                },
+                {
+                    "Title": "Whole slide data - python package for working with wholeslide images and annotations files",
+                    "URL": "https://github.com/DIAGNijmegen/pathology-whole-slide-data",
+                    "AuthorName": "Diagnostic Image Analysis Group, Radboudumc, Nijmegen",
+                    "AuthorURL": "https://www.diagnijmegen.nl/"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "PersonPath22",
+        "Description": "PersonPath22 is a large-scale multi-person tracking dataset containing 236 videos captured mostly from static-mounted cameras,  collected from sources where we were given the rights to redistribute the content and participants have given explicit consent. Each video has ground-truth annotations including both bounding boxes and tracklet-ids for all the persons in each frame.",
+        "Documentation": "https://amazon-science.github.io/tracking-dataset/personpath22.html",
+        "Contact": "Post any questions to [re:Post](https://repost.aws/tags/questions/TApd0Wl5P8S9O6riTWmh-cGw/aws-open-data) and use the `AWS Open Data` tag.",
+        "ManagedBy": "[Amazon Web Services](https://aws.amazon.com/)",
+        "UpdateFrequency": "Periodically",
+        "Tags": [
+            "computer vision"
+        ],
+        "License": "Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0)",
+        "Resources": [
+            {
+                "Description": "Source data",
+                "ARN": "arn:aws:s3:::tracking-dataset-eccv-2022",
+                "Region": "us-east-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Publications": [
+                {
+                    "Title": "Large scale Real-world Multi-Person Tracking",
+                    "URL": "https://assets.amazon.science/6f/13/e48da0fa4cefb9c81adbad6d93ec/large-scale-real-world-multi-person-tracking.pdf",
+                    "AuthorName": "Bing Shuai, Alessandro Bergamo, Uta Buechler, Andrew Berneshawi, Alyssa Boden, Joseph Tighe"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "Terra Fusion Data Sampler",
+        "Description": "The Terra Basic Fusion dataset is a fused dataset of the original Level 1 radiances\nfrom the five Terra instruments. They have been fully validate to contain the original\nTerra instrument Level 1 data. Each Level 1 Terra Basic Fusion file contains one full\nTerra orbit of data and is typically 15 \u2013 40 GB in size, depending on how much data was\ncollected for that orbit. It contains instrument radiance in physical units; radiance\nquality indicator; geolocation for each IFOV at its native resolution; sun-view geometry;\nbservation time; and other attributes/metadata. It is stored in HDF5, conformed to CF\nconventions, and accessible by netCDF-4 enhanced models. It\u2019s naming convention\nfollows: TERRA_BF_L1B_OXXXX_YYYYMMDDHHMMSS_F000_V000.h5. A concise description of the\ndataset, along with links to complete documentation and available software tools, can\nbe found on the Terra Fusion project page: https://terrafusion.web.illinois.edu.</br></br>\n\nTerra is the flagship satellite of NASA\u2019s Earth Observing System (EOS). It was launched\ninto orbit on December 18, 1999 and carries five instruments. These are the\nModerate-resolution Imaging Spectroradiometer (MODIS), the Multi-angle Imaging\nSpectroRadiometer (MISR), the Advanced Spaceborne Thermal Emission and Reflection\nRadiometer (ASTER), the Clouds and Earth\u2019s Radiant Energy System (CERES), and the\nMeasurements of Pollution in the Troposphere (MOPITT).</br></br>\n\nThe Terra Basic Fusion dataset is an easy-to-access record of the Level 1 radiances\nfor instruments on the Terra mission for selected WRS-2 paths covering the years\n2000-2015. These paths are Paths 20-26 (e.g., US corn belt), 108 (e.g., Japan),\n125 (e.g., China), 143 (e.g., India), 150 (e.g., Showa Station, Antarctica),\n169 (e.g., Europe and Africa), 188 (e.g., Nigeria calibration site), and 233\n(e.g., Greenland).\n",
+        "Documentation": "https://go.illinois.edu/terra-fusion-doc",
+        "Contact": "gdi@illinois.edu",
+        "ManagedBy": "University of Illinois",
+        "UpdateFrequency": "Static, with a planned update for years 2016-2020 in the future.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "satellite imagery"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "geospatial",
+            "satellite imagery",
+            "sustainability"
+        ],
+        "License": "Creative Commons Level 0",
+        "Resources": [
+            {
+                "Description": "AWS S3 Public Bucket Containing Terra Basic Fusion Hierarchical Data Format 5 (HDF5) files",
+                "ARN": "arn:aws:s3:::terrafusiondatasampler",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Basic Terra fusion product algorithm theoretical basis and data specifications",
+                    "URL": "https://go.illinois.edu/terra-fusion-doc",
+                    "AuthorName": "Zhao, Guangu; Yang, Muqun; Clipp, Landon; Gao, Yizhao; Lee, Joe H.",
+                    "AuthorURL": "http://hdl.handle.net/2142/105967"
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "TerraFusion GitHub",
+                    "URL": "https://github.com/TerraFusion",
+                    "AuthorName": "University of Illinois"
+                }
+            ]
+        }
+    },
+    {
+        "Deprecated": true,
+        "DeprecatedNotice": "The provider of this dataset no longer provides this data through this mechanism. If there are any questions, reach out through the contact mechanism listed below.",
+        "Name": "IChangeMyCity Complaints Data from Janaagraha",
+        "Description": "The [IChangeMyCity](https://www.ichangemycity.com) project provides insight into the complaints raised by citizens from diffent cities of India related to the issues in their neighbourhoods and the resolution of the same by the civic bodies.",
+        "Documentation": "http://ichangemycity-janaagraha-complaints-data-aws.s3.ap-south-1.amazonaws.com/readme.html",
+        "Contact": "data@janaagraha.org",
+        "ManagedBy": "Not currently managed",
+        "UpdateFrequency": "Daily",
+        "Tags": [
+            "aws-pds",
+            "cities",
+            "civic",
+            "complaints"
+        ],
+        "License": "There are no restrictions on the use of data received from IChangeMyCity.com. More information on licensing and IChangeMyCity data citation is available from IChangeMyCity.com",
+        "Resources": [
+            {
+                "Description": "IChangeMyCity Complaints",
+                "ARN": "arn:aws:s3:::ichangemycity-janaagraha-complaints-data-aws",
+                "Region": "us-west-2",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": null,
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Name": "New York City Taxi and Limousine Commission (TLC) Trip Record Data",
+        "Description": "Data of trips taken by taxis and for-hire vehicles in New York City. Note: access to this dataset is free, however direct S3 access does require an AWS account. Anonymous downloads are accessible from the dataset's documentation webpage listed below.",
+        "Documentation": "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+        "Contact": "research@tlc.nyc.gov",
+        "ManagedBy": "City of New York Taxi and Limousine Commission",
+        "UpdateFrequency": "As soon as new data is available to be shared publicly.",
+        "Tags": [
+            "aws-pds",
+            "cities",
+            "urban",
+            "transportation"
+        ],
+        "License": "http://www1.nyc.gov/home/terms-of-use.page",
+        "Resources": [
+            {
+                "Description": "PARQUET files containing NYC TLC trip data.",
+                "ARN": "arn:aws:s3:::nyc-tlc",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "AccountRequired": true
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Machine learning on distributed Dask using Amazon SageMaker and AWS Fargate",
+                    "URL": "https://aws.amazon.com/blogs/machine-learning/machine-learning-on-distributed-dask-using-amazon-sagemaker-and-aws-fargate/",
+                    "AuthorName": "Ram Vittal"
+                },
+                {
+                    "Title": "Build and run streaming applications with Apache Flink and Amazon Kinesis Data Analytics for Java Applications",
+                    "URL": "https://aws.amazon.com/blogs/big-data/build-and-run-streaming-applications-with-apache-flink-and-amazon-kinesis-data-analytics-for-java-applications/",
+                    "AuthorName": "Steffen Hausmann"
+                },
+                {
+                    "Title": "Deep Dive on Flink & Spark on Amazon EMR",
+                    "URL": "https://www.youtube.com/watch?v=MzTZp47Jy7E",
+                    "AuthorName": "Keith Steward"
+                },
+                {
+                    "Title": "Build a Real-time Stream Processing Pipeline with Apache Flink on AWS",
+                    "URL": "https://aws.amazon.com/blogs/big-data/build-a-real-time-stream-processing-pipeline-with-apache-flink-on-aws/",
+                    "AuthorName": "Steffen Hausmann"
+                },
+                {
+                    "Title": "Exploring data with Python and Amazon S3 Select",
+                    "URL": "https://github.com/aws-samples/cloud-experiments/tree/master/experiments/notebooks/exploring-data",
+                    "AuthorName": "Manav Sehgal"
+                },
+                {
+                    "Title": "Optimizing data for analysis with Amazon Athena and AWS Glue",
+                    "URL": "https://github.com/aws-samples/cloud-experiments/tree/master/experiments/notebooks/optimizing-data",
+                    "AuthorName": "Manav Sehgal"
+                }
+            ],
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Name": "Digital Earth Africa Sentinel-2 Level-2A",
+        "Description": "The Sentinel-2 mission is part of the European Union Copernicus programme for Earth observations. Sentinel-2 consists of twin satellites, Sentinel-2A (launched 23 June 2015) and Sentinel-2B (launched 7 March 2017). The two satellites have the same orbit, but 180\u00b0 apart for optimal coverage and data delivery. Their combined data is used in the Digital Earth Africa Sentinel-2 product.\nTogether, they cover all Earth\u2019s land surfaces, large islands, inland and coastal waters every 3-5 days.\nSentinel-2 data is tiered by level of pre-processing. Level-0, Level-1A and Level-1B data contain raw data from the satellites, with little to no pre-processing. Level-1C data is surface reflectance measured at the top of the atmosphere. This is processed using the Sen2Cor algorithm to give Level-2A, the bottom-of-atmosphere reflectance (Obreg\u00f3n et al, 2019). Level-2A data is the most ideal for research activities as it allows further analysis without applying additional atmospheric corrections.\nThe Digital Earth Africa Sentinel-2 dataset contains Level-2A data of the African continent. Digital Earth Africa does not host any lower-level Sentinel-2 data.\nNote that this data is a subset of the Sentinel-2 COGs dataset.\n",
+        "Documentation": "https://docs.digitalearthafrica.org/en/latest/data_specs/Sentinel-2_Level-2A_specs.html",
+        "Contact": "helpdesk@digitalearthafrica.org",
+        "ManagedBy": "[Digital Earth Africa](https://www.digitalearthafrica.org/)",
+        "UpdateFrequency": "New Sentinel-2 scenes are added regularly, usually within few hours after they are available on Copernicus OpenHub.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "satellite imagery"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "earth observation",
+            "satellite imagery",
+            "geospatial",
+            "natural resource",
+            "sustainability",
+            "disaster response",
+            "deafrica",
+            "stac",
+            "cog"
+        ],
+        "License": "Access to Sentinel data is free, full and open for the broad Regional, National, European and International user community. View [Terms and Conditions](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/TermsConditions).\n",
+        "Resources": [
+            {
+                "Description": "Sentinel-2 scenes and metadata",
+                "ARN": "arn:aws:s3:::deafrica-sentinel-2",
+                "Region": "af-south-1",
+                "Type": "S3 Bucket",
+                "RequesterPays": false,
+                "Explore": [
+                    "[STAC V1.0.0 endpoint](https://explorer.digitalearth.africa/stac/collections/s2_l2a)"
+                ]
+            },
+            {
+                "Description": "[S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html#storage-inventory-contents)",
+                "ARN": "arn:aws:s3:::deafrica-sentinel-2-inventory",
+                "Region": "af-south-1",
+                "Type": "S3 Bucket"
+            },
+            {
+                "Description": "New scene notifications, can subscribe with [Lambda](https://aws.amazon.com/lambda/) or [SQS](https://aws.amazon.com/sqs/). Message contains entire STAC record for each new Item.",
+                "ARN": "arn:aws:sns:af-south-1:543785577597:deafrica-sentinel-2-scene-topic",
+                "Region": "af-south-1",
+                "Type": "SNS Topic"
+            },
+            {
+                "Description": "Bucket creation event notification, can subscribe with [Lambda](https://aws.amazon.com/lambda/) or [SQS](https://aws.amazon.com/sqs/). Message sent by deafrica-sentinel-2 s3 bucket all object create events.",
+                "ARN": "arn:aws:sns:af-south-1:543785577597:deafrica-sentinel-2-topic",
+                "Region": "af-south-1",
+                "Type": "SNS Topic"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Use Sentinel-2 data in the Open Data Cube",
+                    "URL": "https://github.com/opendatacube/cube-in-a-box",
+                    "AuthorName": "Alex Leith"
+                },
+                {
+                    "Title": "Digital Earth Africa Training",
+                    "URL": "http://learn.digitalearthafrica.org/",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Downloading and streaming data using STAC metadata",
+                    "URL": "https://docs.digitalearthafrica.org/en/latest/sandbox/notebooks/Frequently_used_code/Downloading_data_with_STAC.html",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "Digital Earth Africa Explorer",
+                    "URL": "https://explorer.digitalearth.africa/products/s2_l2a/extents",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Digital Earth Africa web services",
+                    "URL": "https://ows.digitalearth.africa",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Digital Earth Africa Map",
+                    "URL": "https://maps.digitalearth.africa/",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Digital Earth Africa Sandbox",
+                    "URL": "https://sandbox.digitalearth.africa/",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Digital Earth Africa Notebook Repo",
+                    "URL": "https://github.com/digitalearthafrica/deafrica-sandbox-notebooks",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                },
+                {
+                    "Title": "Digital Earth Africa Geoportal",
+                    "URL": "https://www.africageoportal.com/pages/digital-earth-africa",
+                    "AuthorName": "Digital Earth Africa Contributors"
+                }
+            ],
+            "Publications": [
+                {
+                    "Title": "Introduction to DE Africa",
+                    "URL": "https://youtu.be/Wkf7N6O9jJQ",
+                    "AuthorName": "Dr Fang Yuan"
+                }
+            ]
+        }
+    },
+    {
+        "Name": "Therapeutically Applicable Research to Generate Effective Treatments (TARGET)",
+        "Description": "Therapeutically Applicable Research to Generate Effective Treatments (TARGET) is the collaborative effort of a large, diverse consortium of extramural and NCI investigators. The goal of the effort is to accelerate molecular discoveries that drive the initiation and progression of hard-to-treat childhood cancers and facilitate rapid translation of those findings into the clinic.\nTARGET projects provide comprehensive molecular characterization to determine the genetic changes that drive the initiation and progression of childhood cancers.The dataset contains open Clinical Supplement, Biospecimen Supplement, RNA-Seq Gene Expression Quantification, miRNA-Seq Isoform Expression Quantification, miRNA-Seq miRNA Expression Quantification data from Genomic Data Commons (GDC), and open data from GDC Legacy Archive.\n",
+        "Documentation": "https://ocg.cancer.gov/programs/target/",
+        "Contact": "dcf-support@datacommons.io",
+        "ManagedBy": "[Center for Translational Data Science at The University of Chicago](https://ctds.uchicago.edu/)",
+        "UpdateFrequency": "Genomic Data Commons (GDC) is source of truth for this dataset; GDC offers monthly data releases,\nalthough this dataset may not be updated at every release.\n",
+        "Tags": [
+            "aws-pds",
+            "cancer",
+            "genomic",
+            "life sciences",
+            "whole genome sequencing",
+            "STRIDES"
+        ],
+        "License": "NIH Genomic Data Sharing Policy: https://gdc.cancer.gov/access-data/data-access-policies",
+        "Resources": [
+            {
+                "Description": "Clinical Supplement, Biospecimen Supplement, RNA-Seq Gene Expression Quantification, miRNA-Seq\nIsoform Expression Quantification, miRNA-Seq miRNA Expression Quantification, GDC Legacy      \nArchive\n",
+                "ARN": "arn:aws:s3:::gdc-target-phs000218-2-open",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            }
+        ],
+        "DataAtWork": {
+            "Tools & Applications": [
+                {
+                    "Title": "Genomic Data Commons",
+                    "URL": "https://portal.gdc.cancer.gov/projects/",
+                    "AuthorName": "National Cancer Institute",
+                    "AuthorURL": "https://gdc.cancer.gov/"
+                },
+                {
+                    "Title": "GDC Legacy Archive",
+                    "URL": "https://portal.gdc.cancer.gov/legacy-archive/",
+                    "AuthorName": "National Cancer Institute",
+                    "AuthorURL": "https://gdc.cancer.gov/"
+                },
+                {
+                    "Title": "TARGET data matrix",
+                    "URL": "https://ocg.cancer.gov/programs/target/data-matrix",
+                    "AuthorName": "National Cancer Institute",
+                    "AuthorURL": "https://ocg.cancer.gov/"
+                },
+                {
+                    "Title": "Broad Institute FireCloud",
+                    "URL": "https://firecloud.terra.bio/",
+                    "AuthorName": "The Broad Institute of MIT & Harvard",
+                    "AuthorURL": "https://www.broadinstitute.org/"
+                },
+                {
+                    "Title": "Cancer Genomics Cloud",
+                    "URL": "https://cgc-accounts.sbgenomics.com/",
+                    "AuthorName": "Seven Bridges",
+                    "AuthorURL": "https://docs.sevenbridges.com/docs/target-data"
+                },
+                {
+                    "Title": "ISB Cancer Genomics Cloud",
+                    "URL": "https://isb-cgc.appspot.com/",
+                    "AuthorName": "Institute for Systems Biology",
+                    "AuthorURL": "https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/data/TARGET_top.html\n"
+                }
+            ],
+            "Publications": [
+                {
+                    "Title": "Genomic classification and identification of the cell of origin of pediatric mixed phenotype\nacute leukemia\n",
+                    "URL": "https://doi.org/10.1038/s41586-018-0436-0",
+                    "AuthorName": "Thomas B. Alexander, Zhaohui Gu, Ilaria Iacobucci, et al."
+                },
+                {
+                    "Title": "The genomic landscape of pediatric and young adult T-lineage acute lymphoblastic leukemia\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=28671688",
+                    "AuthorName": "Yu Liu, John Easton, Ying Shao, et al."
+                },
+                {
+                    "Title": "Ancestry and pharmacogenomics of relapse in acute lymphoblastic leukemia",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/21297632",
+                    "AuthorName": "Yang JJ, Cheng C, Devidas M, et al."
+                },
+                {
+                    "Title": "Genomics in childhood acute myeloid leukemia comes of age",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=29315296",
+                    "AuthorName": "Brunner AM, Graubert TA."
+                },
+                {
+                    "Title": "The molecular landscape of pediatric acute myeloid leukemia reveals recurrent structural\nalterations and age-specific mutational interactions\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=29227476",
+                    "AuthorName": "Bolouri H, Farrar JE, Triche T Jr, et al."
+                },
+                {
+                    "Title": "MicroRNA Expression-Based Model Indicates Event-Free Survival in Pediatric Acute Myeloid\nLeukemia\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=29068783",
+                    "AuthorName": "Lim EL, Trinh DL, Ries RE, et al."
+                },
+                {
+                    "Title": "CSF3R mutations have a high degree of overlap with CEBPA mutations in pediatric AM",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=27143256",
+                    "AuthorName": "Maxson JE, Ries RE, Wang YC, et al."
+                },
+                {
+                    "Title": "TCF21 hypermethylation in genetically quiescent clear cell sarcoma of the kidney",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=26158413",
+                    "AuthorName": "Gooskens SL, Gadd S, Guidry Auvil JM, et al."
+                },
+                {
+                    "Title": "Genetic predisposition to neuroblastoma mediated by a LMO1 super-enhancer polymorphism",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=26560027",
+                    "AuthorName": "Oldridge DA, Wood AC, Weichert-Leahey N, Crimmins I, Sussman R, Winter C, McDaniel LD,\nDiamond M, Hart LS, Zhu S, Durbin AD, Abraham BJ, et al.\n"
+                },
+                {
+                    "Title": "Relapsed neuroblastomas show frequent RAS-MAPK pathway mutations",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=26121087",
+                    "AuthorName": "Eleveld TF, Oldridge DA, Bernard V, Koster J, et al."
+                },
+                {
+                    "Title": "The genetic landscape of high-risk neuroblastoma",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=23334666",
+                    "AuthorName": "Pugh TJ, Morozova O, Attiyeh EF, Asgharzadeh S, Wei JS, Auclair D, Carter SL, Cibulskis K,\nHanna M, Kiezun A, Kim J, Lawrence MS, Lichenstein L, et al.\n"
+                },
+                {
+                    "Title": "Biomarker significance of plasma and tumor miR-21, miR-221, and miR-106a in osteosarcoma\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=29228567",
+                    "AuthorName": "Nakka M, Allen-Rhoades W, Li Y, et al."
+                },
+                {
+                    "Title": "Identification and analyses of extra-cranial and cranial rhabdoid tumor molecular subgroups\nreveal tumors with cytotoxic T cell infiltration\n",
+                    "URL": "https://doi.org/10.1016/j.celrep.2019.10.013",
+                    "AuthorName": "Hye-Jung E. Chun, Pascal D. Johann, Katy Milne et al."
+                },
+                {
+                    "Title": "Genome-Wide Profiles of Extra-cranial Malignant Rhabdoid Tumors Reveal Heterogeneity and\nDysregulated Developmental Pathways\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=26977886",
+                    "AuthorName": "Chun HJ, Lim EL, Heravi-Moussavi A, et al."
+                },
+                {
+                    "Title": "A Children's Oncology Group and TARGET initiative exploring the genetic landscape of Wilms\ntumor\n",
+                    "URL": "https://doi.org/10.1038/ng.3940",
+                    "AuthorName": "Gadd S, Huff V, Walz AL, et al."
+                },
+                {
+                    "Title": "Significance of TP53 Mutation in Wilms Tumors with Diffuse Anaplasia: A Report from the\nChildren's Oncology Group\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=27702824",
+                    "AuthorName": "Ooms AH, Gadd S, Gerhard DS, et al."
+                },
+                {
+                    "Title": "MLLT1 YEATS domain mutations in clinically distinctive Favourable Histology Wilms tumours\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=26635203",
+                    "AuthorName": "Perlman EJ, Gadd S, Arold ST, et al."
+                },
+                {
+                    "Title": "Recurrent DGCR8, DROSHA, and SIX homeodomain mutations in favorable histology Wilms tumors\n",
+                    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/?term=25670082",
+                    "AuthorName": "Walz AL, Ooms A, Gadd S, et al."
+                }
+            ]
+        }
+    },
+    {
+        "Name": "Genome Ark",
+        "Description": "The Genome Ark hosts genomic information for the Vertebrate Genomes Project (VGP) and other related projects. The VGP is an international collaboration that aims to generate complete and near error-free reference genomes for all extant vertebrate species. These genomes will be used to address fundamental questions in biology and disease, to identify species most genetically at risk for extinction, and to preserve genetic information of life.",
+        "Documentation": "https://vertebrategenomesproject.org",
+        "Contact": "[Dr. Erich Jarvis](ejarvis@rockefeller.edu)",
+        "ManagedBy": "The Genome10K community of scientists",
+        "UpdateFrequency": "Data will be continually updated as it is generated.",
+        "Tags": [
+            "aws-pds",
+            "biodiversity",
+            "bioinformatics",
+            "biology",
+            "conservation",
+            "genetic",
+            "genomic",
+            "life sciences"
+        ],
+        "License": "[G10K Data Use Policy](https://genome10k.soe.ucsc.edu/data-use-policies/)",
+        "Resources": [
+            {
+                "Description": "https://vgp.github.io",
+                "ARN": "arn:aws:s3:::genomeark",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://genomeark.s3.amazonaws.com/index.html)"
+                ]
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": null,
+            "Tools & Applications": null,
+            "Publications": null
+        }
+    },
+    {
+        "Name": "NOAA Integrated Surface Database (ISD)",
+        "Description": "The Integrated Surface Database (ISD) consists\nof global hourly and synoptic observations\ncompiled from numerous sources into a gzipped\nfixed width format. ISD was developed as a joint\nactivity within Asheville's Federal Climate\nComplex. The database includes over 35,000 stations\nworldwide, with some having data as far back\nas 1901, though the data show a substantial\nincrease in volume in the 1940s and again in\nthe early 1970s. Currently, there are over\n14,000 \"active\" stations updated daily in the\ndatabase. The total uncompressed data volume is\naround 600 gigabytes; however, it continues to\ngrow as more data are added. ISD includes\nnumerous parameters such as wind speed and\ndirection, wind gust, temperature, dew point,\ncloud data, sea level pressure, altimeter setting,\nstation pressure, present weather, visibility,\nprecipitation amounts for various time periods,\nsnow depth, and various other elements as observed\nby each station.\n",
+        "Documentation": "https://www.ncei.noaa.gov/data/global-hourly/doc/isd-format-document.pdf",
+        "Contact": "For questions regarding data content or quality, visit [the NOAA ISD site](https://www.ncei.noaa.gov/data/global-hourly/doc/isd-format-document.pdf). <br />\nFor any questions regarding data delivery or any general questions regarding the NOAA Open Data Dissemination (NODD) Program, email the NODD Team at nodd@noaa.gov.\n<br /> We also seek to identify case studies on how NOAA data is being used and will be featuring those stories in joint publications and in upcoming events. If you are interested in seeing your story highlighted, please share it with the NODD team by emailing nodd@noaa.gov\n",
+        "ManagedBy": "[NOAA](http://www.noaa.gov/)",
+        "UpdateFrequency": "Daily",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "weather"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "climate",
+            "meteorological",
+            "sustainability",
+            "weather"
+        ],
+        "License": "https://www.ncdc.noaa.gov/isd/data-access",
+        "Resources": [
+            {
+                "Description": "ISD in original format",
+                "ARN": "arn:aws:s3:::noaa-isd-pds",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://noaa-isd-pds.s3.amazonaws.com/index.html)"
+                ]
+            },
+            {
+                "Description": "ISD in CSV format",
+                "ARN": "arn:aws:s3:::noaa-global-hourly-pds",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://noaa-global-hourly-pds.s3.amazonaws.com/index.html)"
+                ]
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "NOAA Integrated Surface Database (ISD) Example Notebook",
+                    "URL": "https://github.com/awslabs/amazon-asdi/tree/main/examples/noaa-isd",
+                    "AuthorName": "Zac Flamig",
+                    "Services": [
+                        "Athena",
+                        "CloudFormation",
+                        "Glue",
+                        "SageMaker"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "Name": "NEXRAD on AWS",
+        "Description": "Real-time and archival data from the Next Generation Weather Radar (NEXRAD) network.",
+        "Documentation": "https://github.com/awslabs/open-data-docs/tree/main/docs/noaa/noaa-nexrad",
+        "Contact": "support-level2@unidata.ucar.edu",
+        "ManagedBy": "[Unidata](https://www.unidata.ucar.edu/)",
+        "UpdateFrequency": "New Level II data is added as soon as it is available.",
+        "Collabs": {
+            "ASDI": {
+                "Tags": [
+                    "weather"
+                ]
+            }
+        },
+        "Tags": [
+            "aws-pds",
+            "agriculture",
+            "earth observation",
+            "natural resource",
+            "weather",
+            "meteorological",
+            "sustainability"
+        ],
+        "License": "There are no restrictions on the use of this data.",
+        "Resources": [
+            {
+                "Description": "NEXRAD Level II archive data",
+                "ARN": "arn:aws:s3:::noaa-nexrad-level2",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://noaa-nexrad-level2.s3.amazonaws.com/index.html)"
+                ]
+            },
+            {
+                "Description": "NEXRAD Level II real-time data",
+                "ARN": "arn:aws:s3:::unidata-nexrad-level2-chunks",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket"
+            },
+            {
+                "Description": "NEXRAD Level III real-time select data",
+                "ARN": "arn:aws:s3:::unidata-nexrad-level3",
+                "Region": "us-east-1",
+                "Type": "S3 Bucket",
+                "Explore": [
+                    "[Browse Bucket](https://unidata-nexrad-level3.s3.amazonaws.com/index.html)"
+                ]
+            },
+            {
+                "Description": "[Rich notifications](https://github.com/awslabs/open-data-docs/tree/main/docs/noaa/noaa-nexrad#subscribing-to-nexrad-data-notifications) for real-time data with filterable fields",
+                "ARN": "arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel2ObjectFilterable",
+                "Region": "us-east-1",
+                "Type": "SNS Topic"
+            },
+            {
+                "Description": "Notifications for the Level II archival bucket",
+                "ARN": "arn:aws:sns:us-east-1:811054952067:NewNEXRADLevel2Archive",
+                "Region": "us-east-1",
+                "Type": "SNS Topic"
+            },
+            {
+                "Description": "Notifications for the Level III bucket",
+                "ARN": "arn:aws:sns:us-east-1:684042711724:NewNEXRADLevel3Object",
+                "Region": "us-east-1",
+                "Type": "SNS Topic"
+            }
+        ],
+        "DataAtWork": {
+            "Tutorials": [
+                {
+                    "Title": "Using Python to Access NCEI Archived NEXRAD Level 2 Data (Jupyter notebook)",
+                    "URL": "http://nbviewer.jupyter.org/gist/dopplershift/356f2e14832e9b676207",
+                    "AuthorName": "Ryan May",
+                    "AuthorURL": "http://dopplershift.github.io"
+                },
+                {
+                    "Title": "Mapping Noaa Nexrad Radar Data With CARTO",
+                    "URL": "https://carto.com/blog/mapping-nexrad-radar-data/",
+                    "AuthorName": "Stuart Lynn",
+                    "AuthorURL": "https://carto.com/blog/author/stuart-lynn/"
+                },
+                {
+                    "Title": "NEXRAD on EC2 tutorial",
+                    "URL": "https://github.com/openradar/AMS_radar_in_the_cloud",
+                    "AuthorName": "openradar",
+                    "AuthorURL": "https://github.com/openradar",
+                    "Services": [
+                        "EC2"
+                    ]
+                },
+                {
+                    "Title": "Get NEXRAD data from AWS, get severe reports from SPC archive, and plot a loop of them",
+                    "URL": "https://github.com/russ-schumacher/ats641_spring2022/blob/master/example_notebooks/pyart_nexrad_maps_reports.ipynb",
+                    "AuthorName": "Russ Schumacher",
+                    "AuthorURL": "https://www.atmos.colostate.edu/people/faculty/schumacher/"
+                },
+                {
+                    "Title": "Updated introduction to S3, Boto, and NOAA Nexrad in SageMaker Studio Lab (SMSL)",
+                    "URL": "https://github.com/aws-samples/aws-nexrad-smsl-notebook/",
+                    "NotebookURL": "https://github.com/aws-samples/aws-nexrad-smsl-notebook/blob/main/Nexrad_Demo.ipynb",
+                    "AuthorName": "Chris Stoner",
+                    "Services": [
+                        "SageMaker Studio Lab"
+                    ]
+                }
+            ],
+            "Tools & Applications": [
+                {
+                    "Title": "nexradaws on pypi.python.org - python module to query and download Nexrad data from Amazon S3",
+                    "URL": "https://pypi.org/project/nexradaws/",
+                    "AuthorName": "Aaron Anderson",
+                    "AuthorURL": "https://github.com/aarande"
+                },
+                {
+                    "Title": "WeatherPipe - Amazon EMR based analysis tool for NEXRAD data stored on Amazon S3",
+                    "URL": "https://github.com/stephenlienharrell/WeatherPipe",
+                    "AuthorName": "Stephen Lien Harrell",
+                    "AuthorURL": "https://github.com/stephenlienharrell"
+                },
+                {
+                    "Title": "Open NEXRAD Data Access for Level 3 with Lambda@Edge",
+                    "URL": "https://github.com/zflamig/ondas-pds",
+                    "AuthorName": "Zac Flamig"
+                },
+                {
+                    "Title": "Into the eye of the storm: NEXRAD Level II open data",
+                    "URL": "https://blog.mapbox.com/3d-animated-hurricane-map-from-radar-data-affaed8a3d70",
+                    "AuthorName": "Jonni Walker"
+                }
+            ],
+            "Publications": [
+                {
+                    "Title": "Level 2 Interface Control Document for Transfer: Build 18",
+                    "URL": "https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620010G.pdf",
+                    "AuthorName": "NOAA ROC"
+                },
+                {
+                    "Title": "Level 2 Interface Control Document for Message Data Formats: Build 18",
+                    "URL": "https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620002R.pdf",
+                    "AuthorName": "NOAA ROC"
+                },
+                {
+                    "Title": "Level 3 Interface Control Document for Message Data Formats: Build 18",
+                    "URL": "https://www.roc.noaa.gov/wsr88d/PublicDocs/ICDs/2620001X.pdf",
+                    "AuthorName": "NOAA ROC"
+                },
+                {
+                    "Title": "Seasonal abundance and survival of North America\u2019s migratory avifauna determined by weather radar",
+                    "URL": "https://www.nature.com/articles/s41559-018-0666-4",
+                    "AuthorName": "Adriaan M. Dokter, Andrew Farnsworth, Daniel Fink, Viviana Ruiz-Gutierrez, Wesley M. Hochachka, Frank A. La Sorte, Orin J. Robinson, Kenneth V. Rosenberg & Steve Kelling"
+                },
+                {
+                    "Title": "Unlocking the Potential of NEXRAD Data through NOAA\u2019s Big Data Partnership",
+                    "URL": "https://journals.ametsoc.org/doi/full/10.1175/BAMS-D-16-0021.1",
+                    "AuthorName": "Steve Ansari and Stephen Del Greco"
+                },
+                {
+                    "Title": "Declines in an abundant aquatic insect, the burrowing mayfly, across major North American waterways",
+                    "URL": "https://www.pnas.org/content/117/6/2987",
+                    "AuthorName": "Phillip M. Stepanian, Sally A. Entrekin, Charlotte E. Wainwright, Djordje Mirkovic, Jennifer L. Tank, & Jeffrey F. Kelly"
+                },
+                {
+                    "Title": "Extreme Pyroconvective Updrafts During a Megafire",
+                    "URL": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020GL089001",
+                    "AuthorName": "B. Rodriguez, N. P. Lareau, D. E. Kingsmill, & C. B. Clements"
+                }
+            ]
+        }
+    }
+]
