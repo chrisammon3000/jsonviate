@@ -10,16 +10,42 @@ python = "^3.11"
 jmespath = "^1.0.1"
 black = {extras = ["jupyter"], version = "^22.12.0"}
 
-[tool.poetry.group.test.dependencies]
-pytest = "^7.2.0"
-coverage = "^7.0.0"
-flake8 = "^6.0.0"
-black = "^22.12.0"
-
-
 [tool.poetry.group.dev.dependencies]
-ipykernel = "^6.19.4"
+ipykernel = "^6.19.2"
+python-dotenv = "^0.21.0"
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+mypy = "^0.981"
+pre-commit = "^2.20.0"
+tox = "^3.25.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+preview = true
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+force_single_line = "True"
+
+[tool.mypy]
+files = ["jsonviate"]
+disallow_untyped_defs = "True"
+disallow_any_unimported = "True"
+no_implicit_optional = "True"
+check_untyped_defs = "True"
+warn_return_any = "True"
+warn_unused_ignores = "True"
+show_error_codes = "True"
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["jsonviate"]
