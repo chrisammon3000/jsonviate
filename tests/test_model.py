@@ -1,13 +1,11 @@
-import pytest
-from .model_fixtures import (
-    test_data_dir,
-    raw_data,
-    classes_map,
-    cross_references_map,
-    expected_classes_data,
-    expected_references_data,
-)
 from jsonviate import JsonToWeaviate
+
+from .model_fixtures import classes_map
+from .model_fixtures import cross_references_map
+from .model_fixtures import expected_classes_data
+from .model_fixtures import expected_references_data
+from .model_fixtures import raw_data
+from .model_fixtures import test_data_dir
 
 
 def test_raw_data(raw_data):
@@ -38,6 +36,7 @@ def test_expected_references_data(expected_references_data):
 # TODO _build_objects
 # TODO _build_references
 # TODO get_parent_alignment
+
 
 # TODO 1) load mappings & references 2) test that from_uuid/to_uuid are correct
 def test_jsonmapper_cross_references(raw_data, classes_map, cross_references_map):
