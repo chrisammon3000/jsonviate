@@ -1,10 +1,11 @@
+import json
 import logging
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-import json
-import jmespath
 from uuid import uuid4
+
+import jmespath
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -12,7 +13,6 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class JsonModel:
-
     __slots__ = "__dict__"
 
     def __init__(self, **kwargs):
@@ -28,9 +28,7 @@ class JsonModel:
 
 # Automatically assembles models from json mappings but needs to use jmespath
 class JsonToWeaviate:
-    def __init__(
-        self, mappings: dict, references: dict = None, data: dict = None
-    ) -> None:
+    def __init__(self, mappings: dict, references: dict = None, data: dict = None) -> None:
         self._input = JsonModel(**data) if data else None
         self._class_mappings = mappings
         self._ref_mappings = references
@@ -55,7 +53,6 @@ class JsonToWeaviate:
 
     def _build_objects(self):
         for map in self._class_mappings:
-
             # build search expressions
             if not map["path"]:
                 expr = f"[{{{', '.join([f'{k}: {v}' for k, v in map['substitutions'].items()])}}}]"
@@ -72,70 +69,52 @@ class JsonToWeaviate:
 
             # build class
             setattr(self.classes, map["class"], JsonModel())
-            setattr(getattr(self.classes, map["class"]), "name", map["class"])
-            setattr(getattr(self.classes, map["class"]), "references", None)
+            getattr(self.classes, map["class"]).name = map["class"]
+            getattr(self.classes, map["class"]).references = None
 
             # build data objects
             data_objects = self.build_weaviate_object(map["class"], expr, self.input)
-            setattr(getattr(self.classes, map["class"]), "data_objects", data_objects)
+            getattr(self.classes, map["class"]).data_objects = data_objects
 
             # set ids
-            ids = [
-                item["id"]
-                for item in getattr(getattr(self.classes, map["class"]), "data_objects")
-            ]
-            setattr(getattr(self.classes, map["class"]), "ids", ids)
+            ids = [item["id"] for item in getattr(self.classes, map["class"]).data_objects]
+            getattr(self.classes, map["class"]).ids = ids
 
             # set parent alignments
             if par_align is not None:
-                setattr(
-                    getattr(self.classes, map["class"]),
-                    "_parent_align",
-                    {align_idx: _id for align_idx, _id in zip(par_align, ids)},
-                )
+                getattr(self.classes, map["class"])._parent_align = {
+                    align_idx: _id for align_idx, _id in zip(par_align, ids)
+                }
 
     def get_parent_alignment(self, path):
         par_path = ".".join(path.split(".")[:-1])
         child_key = path.split(".")[-1].replace("[]", "")
-        align_map = [
-            child_key in item.keys() for item in jmespath.search(par_path, self.input)
-        ]
+        align_map = [child_key in item for item in jmespath.search(par_path, self.input)]
         return [idx for idx, i in enumerate(align_map) if i]
 
     # TODO need a way of handling arrays inside arrays: Services class is an example
     @staticmethod
     def build_weaviate_object(class_name, expr, data):
-        return [
-            {"id": str(uuid4()), "class": class_name, "data": item}
-            for item in jmespath.search(expr, data)
-        ]
+        return [{"id": str(uuid4()), "class": class_name, "data": item} for item in jmespath.search(expr, data)]
 
     def _build_references(self):
         for ref_spec in self._ref_mappings:
             # Skip if class is not in JSON
             if not hasattr(self.classes, ref_spec["fromClass"]):
                 continue
-            setattr(
-                getattr(self.classes, ref_spec["fromClass"]),
-                "references",
-                JsonModel(),
-            )
+            getattr(self.classes, ref_spec["fromClass"]).references = JsonModel()
         for ref_spec in self._ref_mappings:
             # Skip if class is not in JSON
             if not hasattr(self.classes, ref_spec["toClass"]):
                 continue
 
-            from_uuids = getattr(getattr(self.classes, ref_spec["fromClass"]), "ids")
-            to_uuids = getattr(getattr(self.classes, ref_spec["toClass"]), "ids")
+            from_uuids = getattr(self.classes, ref_spec["fromClass"]).ids
+            to_uuids = getattr(self.classes, ref_spec["toClass"]).ids
 
             # get alignments
             if hasattr(getattr(self.classes, ref_spec["toClass"]), "_parent_align"):
-                to_class_align_idx = getattr(
-                    getattr(self.classes, ref_spec["toClass"]), "_parent_align"
-                )
-                from_to_align_map = {
-                    from_uuids[k]: v for k, v in to_class_align_idx.items()
-                }
+                to_class_align_idx = getattr(self.classes, ref_spec["toClass"])._parent_align
+                from_to_align_map = {from_uuids[k]: v for k, v in to_class_align_idx.items()}
 
                 # match from and to uuids based on index position
                 ref = [
@@ -152,9 +131,7 @@ class JsonToWeaviate:
                 # TODO nested list comprehension results in a cartesion product, but so far it's
                 # TODO only been tested with len(from_uuids) == 1. May want to test n:n relationships and possibly optimized this for specific conditions: 1:1, 1:n, n:1, n:n
                 if len(from_uuids) > 1:
-                    logger.warning(
-                        f"Multiple UUIDs in source class while setting references: {ref_spec['fromClass']}."
-                    )
+                    logger.warning(f"Multiple UUIDs in source class while setting references: {ref_spec['fromClass']}.")
                 ref = [
                     {
                         "from_uuid": from_uuid,
@@ -168,7 +145,7 @@ class JsonToWeaviate:
                 ]
 
             setattr(
-                getattr(getattr(self.classes, ref_spec["fromClass"]), "references"),
+                getattr(self.classes, ref_spec["fromClass"]).references,
                 ref_spec["property"],
                 ref,
             )
@@ -183,11 +160,7 @@ class JsonToWeaviate:
 
     @cached_property
     def data_objects(self):
-        return list(
-            chain.from_iterable(
-                [item.data_objects for item in self.classes.__dict__.values()]
-            )
-        )
+        return list(chain.from_iterable([item.data_objects for item in self.classes.__dict__.values()]))
 
     @cached_property
     def cross_references(self):
@@ -212,13 +185,12 @@ class JsonToWeaviate:
 
 
 if __name__ == "__main__":
-    from pathlib import Path
+    # from pathlib import Path
 
     # # open a json file
     # path = Path(__file__).parent / "event.json"
     # with open(path) as file:
     #     event = json.load(file)
-
     # data = json.loads(event["Records"][0]["body"])["data"]
 
     with open("___data/awslabs/output/aws-odr.json") as f:
